@@ -8,9 +8,9 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" }
+      { hid: "description", name: "description", content: "" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -22,13 +22,13 @@ export default {
     "nuxt-windicss",
     "nuxt-vite",
     "@nuxtjs/color-mode",
-    "@nuxtjs/pwa"
+    "@nuxtjs/pwa",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/pwa
-    "@nuxtjs/pwa"
+    "@nuxtjs/pwa",
   ],
   windicss: {
     scan: {
@@ -38,9 +38,9 @@ export default {
         ".git",
         ".nuxt/**/*",
         "*.template.html",
-        "app.html"
+        "app.html",
       ],
-      include: []
+      include: [],
     },
     transformCSS: "pre",
     preflight: {
@@ -48,26 +48,26 @@ export default {
         // add nuxt aliases
         "nuxt-link": "a",
         // @nuxt/image module
-        "nuxt-img": "img"
-      }
-    }
+        "nuxt-img": "img",
+      },
+    },
   },
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      theme_color: "#ffffff",
-      name: "Base proyect"
+      theme_color: "#fafafa",
+      name: "Template No 1",
     },
     icon: {
-      fileName: "icon.png"
-    }
+      fileName: "icon.png",
+    },
   },
   // DarkMode Config
   colorMode: {
-    preference: "dark",
+    preference: "system",
     fallback: "dark",
-    classSuffix: ""
+    classSuffix: "",
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {},
 };

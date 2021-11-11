@@ -1,16 +1,35 @@
-const colors = require("windicss/colors");
-const typography = require("windicss/plugin/typography");
+import { defineConfig } from "windicss/helpers";
+import colors from "windicss/colors";
+import filters from "windicss/plugin/filters";
+import typography from "windicss/plugin/typography";
 
-module.exports = {
+export default defineConfig({
+  preflight: false,
   darkMode: "class",
-  plugins: [typography],
+  plugins: [typography(), filters()],
   shortcuts: {},
   theme: {
     extend: {
       colors: {
-        teal: colors.teal,
-        gray: colors.gray
-      }
-    }
-  }
-};
+        ...colors,
+      },
+    },
+  },
+});
+
+// const colors = require("windicss/colors");
+// const typography = require("windicss/plugin/typography");
+// const filters = require("windicss/plugin/filters");
+
+// module.exports = {
+//   darkMode: "class",
+//   plugins: [typography, filters],
+//   shortcuts: {},
+//   theme: {
+//     extend: {
+//       colors: {
+//         ...colors,
+//       },
+//     },
+//   },
+// };
